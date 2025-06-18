@@ -49,57 +49,21 @@ currently only support `q,k,v` whose dtype is `FP16` -->
 ## Performance
 We compare the TOPS of Sparse_SageAttention, [FlexAttention](url=https://pytorch.org/blog/flexattention/) and [FlashAttention2](url=https://github.com/Dao-AILab/flash-attention) under different sparsity on RTX 4090 and RTX 5090:
 
+<p align="center">
+  <img src="./figs/TFLOPs_25_hd64.png" width="500">
+  <img src="./figs/TFLOPs_25_hd128.png" width="500"><br>
+  <img src="./figs/TFLOPs_50_hd64.png" width="500">
+  <img src="./figs/TFLOPs_50_hd128.png" width="500"><br>
+  <img src="./figs/TFLOPs_75_hd64.png" width="500">
+  <img src="./figs/TFLOPs_75_hd128.png" width="500"><br>
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 0 auto; max-width: 1200px;">
-  <!-- 第一行 -->
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_25_hd64.png" style="width: 100%; height: auto;">
-  </div>
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_50_hd64.png" style="width: 100%; height: auto;">
-  </div>
-
-  <!-- 第二行 -->
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_75_hd64.png" style="width: 100%; height: auto;">
-  </div>
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_25_hd128.png" style="width: 100%; height: auto;">
-  </div>
-
-  <!-- 第三行 -->
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_50_hd128.png" style="width: 100%; height: auto;">
-  </div>
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_75_hd128.png" style="width: 100%; height: auto;">
-  </div>
-
-  <!-- 第四行 -->
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_25_hd64_5090.png" style="width: 100%; height: auto;">
-  </div>
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_50_hd64_5090.png" style="width: 100%; height: auto;">
-  </div>
-
-  <!-- 第五行 -->
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_75_hd64_5090.png" style="width: 100%; height: auto;">
-  </div>
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_25_hd128_5090.png" style="width: 100%; height: auto;">
-  </div>
-
-  <!-- 第六行 -->
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_50_hd128_5090.png" style="width: 100%; height: auto;">
-  </div>
-  <div style="flex: 1 1 45%; min-width: 300px;">
-    <img src="./figs/TFLOPs_75_hd128_5090.png" style="width: 100%; height: auto;">
-  </div>
-</div>
-
+  <img src="./figs/TFLOPs_25_hd64_5090.png" width="500">
+  <img src="./figs/TFLOPs_25_hd128_5090.png" width="500"><br>
+  <img src="./figs/TFLOPs_50_hd64_5090.png" width="500">
+  <img src="./figs/TFLOPs_50_hd128_5090.png" width="500"><br>
+  <img src="./figs/TFLOPs_75_hd64_5090.png" width="500">
+  <img src="./figs/TFLOPs_75_hd128_5090.png" width="500"><br>
+</p>
 
 ## Citation
 **If you use this code or find our work valuable, please cite:**
