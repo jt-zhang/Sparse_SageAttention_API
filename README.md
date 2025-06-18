@@ -9,8 +9,9 @@ This repository provides a Sparse Attention API based on [SageAttention](https:/
 ### Install Package
 To use our Sparse_SageAttention, please:
 ```bash
-# git clone ...
-python setup.py install # or pip install -e .
+git clone https://github.com/jt-zhang/Sparse_SageAttention_API.git
+cd Sparse_SageAttention_API
+python setup.py install  # or pip install -e .
 ```
 
 ## Usage
@@ -23,7 +24,7 @@ sparse_attn_output = sparse_sageattn(
         tensor_layout="HND")
 ```
 * `q, k, v` are in `FP16/BF16` with the shape of `(batch_size, head_num, seq_len, head_dim)` when using the default `tenso_layout`
-* `mask_id` is a **block mask** to specify whether the corresponding block in the attention map should be calculated(**`1` for calculating and `0` for skipped**). The default value is `None`, which will perform full SageAttention V1. Currently, we only support the block size of (128, 64). For example, for an attention map(512x512) below, we can set `mask_id` as:
+* `mask_id` is a **block mask** to specify whether the corresponding block in the attention map should be calculated (**`1` for calculating and `0` for skipped**). The default value is `None`, which will perform full SageAttention V1. Currently, we only support the block size of (128, 64). For example, for an attention map (512x512) below, we can set `mask_id` as:
 
 ```python
 mask_id = torch.tensor([
@@ -38,7 +39,7 @@ mask_id = torch.tensor([
 <img src="./figs/toy_attn_map_512.png" width="50%" height="50%">
 </div>
 
-* `is_causal` to specify whether it is a causal attention or not, the default is `False`.
+* `is_causal` to specify whether it is a causal attention or not; the default is `False`.
 * `tensor_layout` specifies the layout of `q, k, v`:
   * for `q,k,v` with shape `(batch_size, head_num, seqlen, head_dim)` it should be `"HND"`.
   * for `q,k,v` with shape `(batch_size, seqlen, head_num, head_dim)` it should be `"NHD"`.
