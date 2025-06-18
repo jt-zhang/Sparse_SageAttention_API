@@ -1,0 +1,13 @@
+/build
+/sparse_sageattn.egg-info
+test.py
+*.pkl
+/__pycache__
+/others
+/dist
+test_flex.py
+test_precision.py
+test_speed.py
+utils.py
+TFLOPs_0_hd*.png
+sparse_sageattn/__pycache__
