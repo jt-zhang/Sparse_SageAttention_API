@@ -50,19 +50,19 @@ currently only support `q,k,v` whose dtype is `FP16` -->
 We compare the TOPS of Sparse_SageAttention, [FlexAttention](url=https://pytorch.org/blog/flexattention/) and [FlashAttention2](url=https://github.com/Dao-AILab/flash-attention) under different sparsity on RTX 4090 and RTX 5090:
 
 <p align="center">
-  <img src="./figs/TFLOPs_25_hd64.png" width="500">
-  <img src="./figs/TFLOPs_25_hd128.png" width="500"><br>
-  <img src="./figs/TFLOPs_50_hd64.png" width="500">
-  <img src="./figs/TFLOPs_50_hd128.png" width="500"><br>
-  <img src="./figs/TFLOPs_75_hd64.png" width="500">
-  <img src="./figs/TFLOPs_75_hd128.png" width="500"><br>
+  <img src="./figs/TFLOPs_25_hd64.png" width="400">
+  <img src="./figs/TFLOPs_25_hd128.png" width="400"><br>
+  <img src="./figs/TFLOPs_50_hd64.png" width="400">
+  <img src="./figs/TFLOPs_50_hd128.png" width="400"><br>
+  <img src="./figs/TFLOPs_75_hd64.png" width="400">
+  <img src="./figs/TFLOPs_75_hd128.png" width="400"><br>
 
-  <img src="./figs/TFLOPs_25_hd64_5090.png" width="500">
-  <img src="./figs/TFLOPs_25_hd128_5090.png" width="500"><br>
-  <img src="./figs/TFLOPs_50_hd64_5090.png" width="500">
-  <img src="./figs/TFLOPs_50_hd128_5090.png" width="500"><br>
-  <img src="./figs/TFLOPs_75_hd64_5090.png" width="500">
-  <img src="./figs/TFLOPs_75_hd128_5090.png" width="500"><br>
+  <img src="./figs/TFLOPs_25_hd64_5090.png" width="400">
+  <img src="./figs/TFLOPs_25_hd128_5090.png" width="400"><br>
+  <img src="./figs/TFLOPs_50_hd64_5090.png" width="400">
+  <img src="./figs/TFLOPs_50_hd128_5090.png" width="400"><br>
+  <img src="./figs/TFLOPs_75_hd64_5090.png" width="400">
+  <img src="./figs/TFLOPs_75_hd128_5090.png" width="400"><br>
 </p>
 
 ## Citation
