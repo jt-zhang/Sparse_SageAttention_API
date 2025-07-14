@@ -23,8 +23,8 @@ sparse_attn_output = sparse_sageattn(
         is_causal=False, 
         tensor_layout="HND")
 ```
-* `q, k, v` are in `FP16/BF16` with the shape of `(batch_size, head_num, seq_len, head_dim)` when using the default `tenso_layout`
-* `mask_id` is a **block mask** to specify whether the corresponding block in the attention map should be calculated (**`1` for calculating and `0` for skipped**). The default value is `None`, which will perform full SageAttention V1. Currently, we only support the block size of (128, 64). For example, for an attention map (512x512) below, we can set `mask_id` as:
+* `q, k, v` are in `FP16/BF16` with the shape of `(batch_size, head_num, seq_len, head_dim)` when using the default `tensor_layout`
+* `mask_id` is a **block mask** to specify whether the corresponding block in the attention map should be calculated (**`1` for calculating and `0` for skipped**). `mask_id` is of shape `(batch_size, num_qo_heads, qo_seq_len // BLOCK_M, kv_seq_len // BLOCK_N)`, which means that we can specify a block-level attention mask for each attention head. The default value is `None`, which will perform full SageAttention V1. Currently, we only support the block size of (128, 64). For example, for an attention map (512x512) below, we can set `mask_id` as:
 
 ```python
 mask_id = torch.tensor([
