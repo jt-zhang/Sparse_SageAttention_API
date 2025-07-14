@@ -139,7 +139,8 @@ def forward(q, k, k_block_id, v, q_scale, k_scale, is_causal=False, tensor_layou
     else:
         raise ValueError(f"tensor_layout {tensor_layout} not supported")
     
-    assert qo_len == kv_len, "qo_len and kv_len must be equal for causal attention"
+    if is_causal:
+        assert qo_len == kv_len, "qo_len and kv_len must be equal for causal attention"
 
     HEAD_DIM_K = head_dim
     num_kv_groups = h_qo // h_kv
