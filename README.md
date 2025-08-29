@@ -1,6 +1,15 @@
 # Sparse SageAttention
 This repository provides a Sparse Attention API based on [SageAttention](https://github.com/thu-ml/SageAttention) **V1**, which can compute attention with any block sparse pattern very fast.
 
+## Fast API in SpargeAttn Repo
+There is a **Fast Sparse Block Attention API based on SageAttention2/2++ in [SpargeAttn Repo](https://github.com/thu-ml/SpargeAttn):**
+
+```python
+from spas_sage_attn import block_sparse_sage2_attn_cuda
+
+block_sparse_sage2_attn_cuda(q, k, v, mask_id=None, scale=None, pvthreshd=20, attention_sink=False, tensor_layout="HND", return_sparsity=False):
+```
+
 ## Installation
 ### Base Environment
 * `python>=3.9`, `torch>=2.3.0`, `triton==3.0 / 3.1 / 3.2`
