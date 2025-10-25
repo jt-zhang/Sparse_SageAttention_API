@@ -1,5 +1,6 @@
 # Sparse SageAttention
-This repository provides a Sparse Attention API based on [SageAttention](https://github.com/thu-ml/SageAttention) **V1**, which can compute attention with any block sparse pattern very fast.
+This repository provides a Sparse Attention API based on [SageAttention](https://github.com/thu-ml/SageAttention) **V1**, which can compute attention with any block sparse pattern fast.  
+**However, for the fastest state-of-the-art sparse attention API, use the APIs in [SpargeAttn](https://github.com/thu-ml/SpargeAttn).**
 
 ## Fast API in SpargeAttn Repo
 There is a **Fast Sparse Block Attention API based on SageAttention2/2++ in [SpargeAttn Repo](https://github.com/thu-ml/SpargeAttn):**
